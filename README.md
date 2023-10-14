@@ -1,0 +1,1 @@
+Repository for old olympiads tasks..
