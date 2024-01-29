@@ -1,7 +1,15 @@
+number = int(input("Введите натуральное число: "))
 
-for x in range(15):
-    n1 = 1 * 15**4 + 3 * 15**3 + 5*15**2 + x * 15 + 7
-    n2 = 7 * 15**4 + x * 15**3 + 5 * 15**2 + 3 * 15 + 1
-    if (n1+n2) % 14 == 0:
-        print((n1+n2) // 14)
-        break
+max_digit = 0
+max_digit_position = 0
+current_position = 1
+
+while number > 0:
+    digit = number % 10
+    if digit >= max_digit:
+        max_digit = digit
+        max_digit_position = current_position
+    number //= 10
+    current_position += 1
+
+print("Номер самой большой цифры, считая с конца числа:", max_digit_position)
